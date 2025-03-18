@@ -46,7 +46,7 @@
       "use": "@vercel/static"
     },
     {
-      "src": "pyodide.wasm",
+      "src": "pyodide.asm.wasm",
       "use": "@vercel/static"
     }
   ],
@@ -96,28 +96,8 @@
       "dest": "/pyodide.js"
     },
     {
-      "src": "/pyodide.wasm",
-      "dest": "/pyodide.wasm"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/pyodide.wasm",
-      "headers": [
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
-        }
-      ]
-    },
-    {
-      "source": "/pyodide.js",
-      "headers": [
-        {
-          "key": "Access-Control-Allow-Origin",
-          "value": "*"
-        }
-      ]
+      "src": "/pyodide.asm.wasm",
+      "dest": "/pyodide.asm.wasm"
     }
   ]
 }
