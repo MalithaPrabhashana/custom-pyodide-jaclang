@@ -1,104 +1,123 @@
 {
-    "version": 2,
-    "builds": [
-      {
-        "src": "*.html",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "*.whl",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "*.tar",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "*.mjs",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "*.zip",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "*.json",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "*.js",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "*.map",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "*.ts",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "*.bin",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "pyodide.js",
-        "use": "@vercel/static"
-      },
-      {
-        "src": "pyodide.wasm",
-        "use": "@vercel/static"
-      }
-    ],
-    "routes": [
-      {
-        "src": "/(.*).html",
-        "dest": "/$1.html"
-      },
-      {
-        "src": "/(.*).whl",
-        "dest": "/$1.whl"
-      },
-      {
-        "src": "/(.*).tar",
-        "dest": "/$1.tar"
-      },
-      {
-        "src": "/(.*).mjs",
-        "dest": "/$1.mjs"
-      },
-      {
-        "src": "/(.*).zip",
-        "dest": "/$1.zip"
-      },
-      {
-        "src": "/(.*).json",
-        "dest": "/$1.json"
-      },
-      {
-        "src": "/(.*).js",
-        "dest": "/$1.js"
-      },
-      {
-        "src": "/(.*).map",
-        "dest": "/$1.map"
-      },
-      {
-        "src": "/(.*).ts",
-        "dest": "/$1.ts"
-      },
-      {
-        "src": "/(.*).bin",
-        "dest": "/$1.bin"
-      },
-      {
-        "src": "/pyodide.js",
-        "dest": "/pyodide.js"
-      },
-      {
-        "src": "/pyodide.wasm",
-        "dest": "/pyodide.wasm"
-      }
-    ]
-  }
-  
+  "version": 2,
+  "builds": [
+    {
+      "src": "*.html",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.whl",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.tar",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.mjs",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.zip",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.json",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.map",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.ts",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "*.bin",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "pyodide.js",
+      "use": "@vercel/static"
+    },
+    {
+      "src": "pyodide.wasm",
+      "use": "@vercel/static"
+    }
+  ],
+  "headers": [
+    {
+      "source": "/pyodide.wasm",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/pyodide.js",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    }
+  ],
+  "routes": [
+    {
+      "src": "/(.*).html",
+      "dest": "/$1.html"
+    },
+    {
+      "src": "/(.*).whl",
+      "dest": "/$1.whl"
+    },
+    {
+      "src": "/(.*).tar",
+      "dest": "/$1.tar"
+    },
+    {
+      "src": "/(.*).mjs",
+      "dest": "/$1.mjs"
+    },
+    {
+      "src": "/(.*).zip",
+      "dest": "/$1.zip"
+    },
+    {
+      "src": "/(.*).json",
+      "dest": "/$1.json"
+    },
+    {
+      "src": "/(.*).js",
+      "dest": "/$1.js"
+    },
+    {
+      "src": "/(.*).map",
+      "dest": "/$1.map"
+    },
+    {
+      "src": "/(.*).ts",
+      "dest": "/$1.ts"
+    },
+    {
+      "src": "/(.*).bin",
+      "dest": "/$1.bin"
+    },
+    {
+      "src": "/pyodide.js",
+      "dest": "/pyodide.js"
+    },
+    {
+      "src": "/pyodide.wasm",
+      "dest": "/pyodide.wasm"
+    }
+  ]
+}
