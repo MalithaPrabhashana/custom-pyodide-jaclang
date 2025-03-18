@@ -99,5 +99,25 @@
       "src": "/pyodide.wasm",
       "dest": "/pyodide.wasm"
     }
+  ],
+  "headers": [
+    {
+      "source": "/pyodide.wasm",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    },
+    {
+      "source": "/pyodide.js",
+      "headers": [
+        {
+          "key": "Access-Control-Allow-Origin",
+          "value": "*"
+        }
+      ]
+    }
   ]
 }
